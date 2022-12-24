@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import urlFor from "../lib/urlFor";
+import Link from "next/link";
 
 function BlogsList({ posts }) {
   console.log(posts.length);
@@ -10,13 +11,14 @@ function BlogsList({ posts }) {
         {posts.map((post) => (
           <div key={post._id} className="flex flex-col">
             <div className="relative w-full h-80">
-              <Image
-                className="object-cover"
-                src={urlFor(post.mainImage).url()}
-                alt={post.author.name}
-                fill
-              />
-
+              <Link href="/blogs/[slug]" as={`/blogs/${post.slug.current}`}>
+                <Image
+                  className="object-cover"
+                  src={urlFor(post.mainImage).url()}
+                  alt={post.author.name}
+                  fill
+                />
+              </Link>
               <div className="absolute bottom-0 w-full bg-black bg-opacity-20 backdrop-blur-lg drop-shadow-lg text-white p-4 flex justify-between ">
                 <div>
                   <p>{post.title}</p>
@@ -31,7 +33,6 @@ function BlogsList({ posts }) {
 
                 <div>
                   {post.categories.map((category) => {
-                    console.log(category.title);
                     return (
                       <div key={category.id}>
                         <p>{category.title}</p>

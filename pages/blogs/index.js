@@ -18,6 +18,7 @@ export const getStaticProps = async ({ preview = false }) => {
 };
 
 function Blogs({ posts }) {
+  console.log(posts[0].slug);
   return (
     <div>
       <h1>This is my blogs</h1>
