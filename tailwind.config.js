@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fira: ['"Fira Code"', "monospace"],
+        heebo: ['"Heebo"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
