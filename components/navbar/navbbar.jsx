@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -6,22 +5,15 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <Head>
-        <title>Hao Chen</title>
-        <meta
-          name="description"
-          content="Create Next JS Responsive Menu with Tailwind CSS"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <nav className="w-full bg-gray-800 shadow font-fira">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <nav className="w-full bg-primary_black opacity-90 shadow font-fira fixed top-0 z-10 ">
+        <div className="justify-between py-2 px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 hover:py-3 transition-all ease-in-out duration-200 filter-blur">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <a href="#">
-                <h2 className="text-2xl text-white font-bold">NEXT JS</h2>
+            <div className="flex items-center justify-between md:block">
+              <a href="/#">
+                {/* <h2 className="text-2xl text-white font-bold">HaoChen</h2> */}
+                <img src="/7.svg" alt="logo" width="48px" />
               </a>
-              <div className="md:hidden">
+              <div className="md:hidden ">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
@@ -63,9 +55,9 @@ export default function Navbar() {
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                 navbar ? "block" : "hidden"
-              }`}
+              } `}
             >
-              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
                 <li className="text-white">
                   <Link href="/">Home</Link>
                 </li>
