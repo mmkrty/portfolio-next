@@ -6,3 +6,8 @@
 body {
   font-family: "Heebo", sans-serif;
 }
+
+.filter-grey {
+  filter: invert(82%) sepia(10%) saturate(287%) hue-rotate(165deg)
+    brightness(88%) contrast(90%);
+}
