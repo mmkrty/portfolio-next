@@ -5,6 +5,7 @@ import About from "../components/about/about";
 import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
 import Skills from "../components/skills/skills";
+import Projects from "../components/projects/projects";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Projects />
       </main>
     </>
   );

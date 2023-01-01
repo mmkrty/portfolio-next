@@ -14,7 +14,7 @@ function Hero() {
         </h2>
         <div>
           <Link
-            className="inline-block text-primary_yellow font-fira py-4 px-6 border-2 rounded-sm border-primary_yellow"
+            className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow"
             href="#"
           >
             Check out my projects
