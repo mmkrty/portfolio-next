@@ -4,7 +4,7 @@ import React from "react";
 function Hero() {
   return (
     <section className="min-h-screen max-w-5xl my-0 mx-auto flex justify-center items-center">
-      <div className="mx-6">
+      <div className="mx-14">
         <p className="font-fira mb-5">Hi, this is</p>
         <h1 className="text-6xl font-black text-primary_yellow mb-2">
           Hao Chen
