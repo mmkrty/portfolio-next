@@ -57,7 +57,7 @@ function Footer() {
             </Link>
           </div>
 
-          <p>Built by Hao Chen Liu 2023</p>
+          <p>Built by Hao Chen Liu 2023.</p>
         </div>
       </div>
     </footer>

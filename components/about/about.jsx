@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <section className="min-h-screen max-w-5xl my-0 mx-auto flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center mx-14">
+      <div className="flex flex-col justify-center items-center mx-6 xs:mx-14">
         <div className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-primary_yellow">
           <img
             className="object-cover scale-150 object-left origin-[10%_45%]"

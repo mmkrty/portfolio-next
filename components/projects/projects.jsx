@@ -3,7 +3,7 @@ import React from "react";
 function Projects() {
   return (
     <section className="min-h-screen max-w-5xl my-0 mx-auto flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center mx-14">
+      <div className="flex flex-col justify-center items-center mx-6 xs:mx-14">
         <div>
           <h2 className="text-3xl font-semibold mb-4">Projects</h2>
           <div>
