@@ -1,5 +1,6 @@
 import React from "react";
 import groq from "groq";
+import Link from "next/link";
 import { client } from "../../lib/sanity.client";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../components/RichTextComponents";
@@ -15,25 +16,63 @@ const query = groq`
 
 export async function getStaticPaths() {
   const posts = await client.fetch(query);
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug.current },
-  }));
 
-  return { paths, fallback: false };
+  // const paths = posts.map((post) => ({
+  //   params: { slug: post.slug.current },
+  // }));
+  // console.log(paths);
+
+  const slugs = posts.map((post) => post.slug.current);
+  console.log(slugs);
+
+  // return { paths, fallback: false };
+  return {
+    paths: slugs.map((slug) => `/blogs/${slug}`),
+    fallback: false,
+  };
 }
 
-export const getStaticProps = async ({ params: { slug } }) => {
-  const posts = await client.fetch(query, { slug });
-  const post = posts[0];
-  return { props: { post } };
+// export const getStaticProps = async ({ params: { slug } }) => {
+//   const posts = await client.fetch(query, { slug });
+//   const post = posts[0];
+//   return { props: { post } };
+// };
+
+export const getStaticProps = async ({ params }) => {
+  console.log(params);
+  // The slug is available in the params object
+  const slug = params.slug;
+
+  // Fetch the post from Sanity based on the slug
+  const post = await client.fetch(
+    `*[_type == "post" && slug.current == $slug][0]`,
+    { slug }
+  );
+  console.log("this is post", post);
+
+  // Return the post data
+  return {
+    props: {
+      post,
+    },
+  };
 };
 
 export function BlogPost({ post }) {
-  console.log(post);
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <PortableText value={post.body} components={RichTextComponents} />
+    <div className="mx-6">
+      <article className="min-h-screen max-w-5xl mt-36 mx-auto flex justify-center items-start">
+        <div className="w-full">
+          <h1 className="text-3xl font-bold mb-6">{post.title}</h1>
+          <PortableText value={post.body} components={RichTextComponents} />
+          <Link
+            href="/blogs"
+            className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow mt-10"
+          >
+            Back to Blog
+          </Link>
+        </div>
+      </article>
     </div>
   );
 }

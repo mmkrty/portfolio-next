@@ -39,7 +39,7 @@ export const RichTextComponents = {
       <h4 className="text-2xl py-4 font-bold">{children}</h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-purple-500 pl-5 py-5 my-5">
+      <blockquote className="border-l-purple-500 pl-5 py-5 my-5 break-words">
         {children}
       </blockquote>
     ),
