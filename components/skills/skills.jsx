@@ -2,7 +2,10 @@ import React from "react";
 
 function Skills() {
   return (
-    <section className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-4">
+    <section
+      id="skills"
+      className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-4"
+    >
       <div className="flex flex-col justify-center mx-6 xs:mx-14">
         <h2 className="text-3xl font-semibold mb-2">Skills</h2>
         <p>

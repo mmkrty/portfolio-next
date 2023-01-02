@@ -24,6 +24,9 @@ module.exports = {
         primary_blue: "#5c7196",
         primary_grey: "#acb7c0",
       },
+      minHeight: {
+        "1/2-screen": "50vh",
+      },
     },
   },
   plugins: [],

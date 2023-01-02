@@ -2,9 +2,12 @@ import React from "react";
 
 function About() {
   return (
-    <section className="min-h-screen max-w-5xl my-0 mx-auto flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center mx-6 xs:mx-14">
-        <div className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-primary_yellow">
+    <section
+      id="about"
+      className="min-h-screen max-w-5xl my-0 mx-auto flex justify-center items-center"
+    >
+      <div className="flex flex-col justify-center items-center gap-4 mx-6 xs:mx-14 md:flex-row-reverse md:gap-8 md:items-start">
+        <div className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-primary_yellow md:w-auto md:h-full md:rounded-md">
           <img
             className="object-cover scale-150 object-left origin-[10%_45%]"
             src="/thumb.png"

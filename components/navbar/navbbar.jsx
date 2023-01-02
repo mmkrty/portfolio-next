@@ -59,16 +59,16 @@ export default function Navbar() {
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
                 <li className="text-white">
-                  <Link href="/">Home</Link>
+                  <Link href="/#about">About</Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/blogs">Blogs</Link>
+                  <Link href="/#skills">Skills</Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/about">About</Link>
+                  <Link href="/#projects">Projects</Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/blogs">Blog</Link>
                 </li>
               </ul>
             </div>

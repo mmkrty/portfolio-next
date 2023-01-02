@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import urlFor from "../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 import Link from "next/link";
 
 function BlogsList({ posts }) {
   console.log(posts.length);
   return (
-    <div>
-      <div className="px-10 gap-10 pb-24 grid grid-cols-1 md:grid-cols-2">
+    <div className="mx-6 sm:mx-14">
+      <div className="px-6 gap-10 pb-24 grid grid-cols-1 md:grid-cols-2">
         {posts.map((post) => (
           <div key={post._id} className="flex flex-col">
             <div className="relative w-full h-80">

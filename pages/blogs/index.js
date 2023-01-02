@@ -1,7 +1,8 @@
 import React from "react";
 import { groq } from "next-sanity";
 import { client } from "../../lib/sanity.client";
-import BlogsList from "../../components/BlogsList";
+import BlogsList from "../../components/blogList/BlogsList";
+import BlogHeader from "../../components/blogHeader/blogHeader";
 
 const postQuery = groq`
   *[_type=='post'] {
@@ -21,7 +22,7 @@ function Blogs({ posts }) {
   console.log(posts[0].slug);
   return (
     <div>
-      <h1>This is my blogs</h1>
+      <BlogHeader />
       <BlogsList posts={posts} />
     </div>
   );
