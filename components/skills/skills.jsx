@@ -90,7 +90,7 @@ function Skills() {
                   className="filter-grey"
                   width="48px"
                 />
-                <h4 className="mt-1">PostgresQL</h4>
+                <h4 className="mt-1">PostgreSQL</h4>
               </div>
               <div className="flex flex-col justify-center items-center">
                 <img

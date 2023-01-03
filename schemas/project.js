@@ -13,11 +13,16 @@ export default defineType({
     defineField({
       name: "description",
       title: "Description",
-      type: "string",
+      type: "blockContent",
     }),
     defineField({
       name: "link",
       title: "Link",
+      type: "string",
+    }),
+    defineField({
+      name: "github",
+      title: "Github Link",
       type: "string",
     }),
     defineField({

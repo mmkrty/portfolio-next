@@ -7,7 +7,20 @@ import { client } from "../lib/sanity.client";
 import Skills from "../components/skills/skills";
 import Projects from "../components/projects/projects";
 
-export default function Home() {
+const projectQuery = groq`
+  *[_type=='project'] {
+    ...,  
+    technologies[]->
+  } | order(_createdAt asc)
+`;
+
+export const getStaticProps = async ({ preview = false }) => {
+  const projects = await client.fetch(projectQuery);
+
+  return { props: { projects } };
+};
+
+export default function Home({ projects }) {
   return (
     <>
       <Head>
@@ -20,7 +33,7 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
+        <Projects projects={projects} />
       </main>
     </>
   );

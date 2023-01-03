@@ -11,8 +11,8 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "imageUrl",
-      title: "ImageUrl",
+      name: "path",
+      title: "Path",
       type: "string",
     }),
   ],
