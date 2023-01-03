@@ -6,8 +6,8 @@ import Link from "next/link";
 function BlogsList({ posts }) {
   console.log(posts.length);
   return (
-    <div className="mx-6 sm:mx-14">
-      <div className="px-6 gap-10 pb-24 grid grid-cols-1 md:grid-cols-2">
+    <div className="max-w-5xl mx-auto">
+      <div className=" gap-10 pb-24 grid grid-cols-1 md:grid-cols-2  mx-6 xs:mx-14">
         {posts.map((post) => (
           <div key={post._id} className="flex flex-col">
             <div className="relative w-full h-80">

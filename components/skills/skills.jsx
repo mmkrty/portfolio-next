@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 function Skills() {
   return (
@@ -7,7 +8,7 @@ function Skills() {
       className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-4"
     >
       <div className="flex flex-col justify-center mx-6 xs:mx-14">
-        <h2 className="text-3xl font-semibold mb-2">Skills</h2>
+        <SectionHeading title="Skills" />
         <p>
           In addition to HTML5, CSS3, and Javascript ES6+, here are some of the
           techs I worked with:

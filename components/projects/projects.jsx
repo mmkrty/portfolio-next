@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 function Projects() {
   return (
@@ -8,7 +9,7 @@ function Projects() {
     >
       <div className="flex flex-col justify-center items-center mx-6 xs:mx-14">
         <div>
-          <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+          <SectionHeading title="Projects" />
           <div>
             <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
               <div className="rounded-sm overflow-hidden self-stretch">

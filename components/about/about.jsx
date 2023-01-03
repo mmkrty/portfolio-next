@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
           />
         </div>
         <div className="mt-4">
-          <h2 className="text-3xl font-semibold mb-2">About me</h2>
+          <SectionHeading title="About me" />
           <p className=" mb-2">
             Hi there, this is Hao Chen. I'm a Web developer and Historian based
             in Berlin.
