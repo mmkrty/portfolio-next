@@ -5,13 +5,13 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-4"
+      className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-24 md:min-h-screen"
     >
       <div className="flex flex-col justify-center mx-6 xs:mx-14">
         <SectionHeading title="Skills" />
         <p>
           In addition to HTML5, CSS3, and Javascript ES6+, here are some of the
-          techs I worked with:
+          techs I worked with recently:
         </p>
         <div className="font-fira mt-3 gap-4 grid grid-cols-1 md:grid-cols-2">
           <div className="bg-primary_black_light py-3 px-4 rounded-sm">

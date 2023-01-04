@@ -18,9 +18,10 @@ function Hero() {
         <div>
           <Link
             className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow"
-            href="#"
+            href="https://drive.google.com/file/d/1pokUZN4gtxieKQAVF3dgtiXfxB-Ax4Iq/view?usp=share_link"
+            target="_blank"
           >
-            Check out my projects
+            Download My CV
           </Link>
         </div>
       </div>

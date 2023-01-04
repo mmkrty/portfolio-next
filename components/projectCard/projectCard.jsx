@@ -9,7 +9,7 @@ function ProjectCard({ project, index }) {
     <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
       <div className="relative rounded-sm overflow-hidden md:self-stretch">
         <img
-          className="object-contain h-full w-full md:object-cover"
+          className="object-contain h-full w-full md:object-cover border-2 border-primary_yellow"
           src={urlFor(project.image).url()}
           alt={project.name}
         />
@@ -22,7 +22,7 @@ function ProjectCard({ project, index }) {
         /> */}
       </div>
 
-      <div className={`${index % 2 !== 0 ? "order-first" : ""}`}>
+      <div className={`${index % 2 !== 0 ? "md:order-first" : ""}`}>
         <div className="flex justify-between items-center mb-3">
           <h3 className="text-2xl font-semibold">{project.name}</h3>
           <div className="flex gap-2">
@@ -49,7 +49,8 @@ function ProjectCard({ project, index }) {
           value={project.description}
           components={RichTextComponents}
         />
-        <div className="font-fira flex gap-2 mb-3 flex-wrap">
+        <hr className="h-px border-0 mt-3 bg-gray-400 "></hr>
+        <div className="font-fira flex gap-2 mt-3 flex-wrap">
           {project.technologies.map((tech, idx) => (
             <p key={idx}>{tech.title}</p>
           ))}

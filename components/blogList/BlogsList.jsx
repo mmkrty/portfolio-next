@@ -8,8 +8,8 @@ function BlogsList({ posts }) {
   return (
     <div className="max-w-5xl mx-auto">
       <div className=" gap-10 pb-24 grid grid-cols-1 md:grid-cols-2  mx-6 xs:mx-14">
-        {posts.map((post) => (
-          <div key={post._id} className="flex flex-col">
+        {posts.map((post, idx) => (
+          <div key={idx} className="flex flex-col">
             <div className="relative w-full h-80">
               <Link href="/blogs/[slug]" as={`/blogs/${post.slug.current}`}>
                 <Image
@@ -32,9 +32,9 @@ function BlogsList({ posts }) {
                 </div>
 
                 <div>
-                  {post.categories.map((category) => {
+                  {post.categories.map((category, idx) => {
                     return (
-                      <div key={category.id}>
+                      <div key={idx}>
                         <p>{category.title}</p>
                       </div>
                     );

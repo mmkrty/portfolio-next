@@ -22,16 +22,18 @@ function About() {
             in Berlin.
           </p>
           <p className=" mb-2">
-            My interest in web development originated from a digital humanities
-            workshop I attended during my studies. I realized great content
-            today needs up-to-date technologies to reach more audiences.
+            My interest in web development began when I attended a digital
+            humanities workshop during my studies. I realized that in order to
+            reach more people, high-quality content needs to be supported by
+            modern technologies. I believe the web is the most powerful and
+            universal medium, so I decided to give web development a try and
+            ended up loving it.
           </p>
           <p>
-            Since I consider the web as the most powerful and universal medium,
-            I decided to give web development a try and eventually fell in love
-            with it. After a year of self-learning and 9 weeks of intensive
-            training at Le Wagon, I'm looking forward to working as a web
-            developer.
+            After a year of self-learning and 9 weeks of intensive training at
+            Le Wagon, I'm looking forward to working full-time as a web
+            developer. Recently, I have been learning React, NextJS, and Rails
+            by building projects with them.
           </p>
         </div>
       </div>
