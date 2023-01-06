@@ -85,7 +85,7 @@ function Skills() {
             <div className="flex justify-around items-end my-6 gap-2">
               <div className="flex flex-col justify-center items-center">
                 <img
-                  src="/icons/postgresQL_icon.svg"
+                  src="/icons/postgresql_icon.svg"
                   alt="postgresQL"
                   className="filter-grey"
                   width="48px"
