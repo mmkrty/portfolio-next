@@ -58,16 +58,16 @@ export default function Navbar() {
               } `}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
-                <li className="text-white">
+                <li className="text-white hover:text-primary_yellow transition-all ease-in-out duration-300">
                   <Link href="/#about">About</Link>
                 </li>
-                <li className="text-white">
+                <li className="text-white hover:text-primary_yellow transition-all ease-in-out duration-300">
                   <Link href="/#skills">Skills</Link>
                 </li>
-                <li className="text-white">
+                <li className="text-white hover:text-primary_yellow transition-all ease-in-out duration-300">
                   <Link href="/#projects">Projects</Link>
                 </li>
-                <li className="text-white">
+                <li className="text-white hover:text-primary_yellow transition-all ease-in-out duration-300">
                   <Link href="/blogs">Blog</Link>
                 </li>
               </ul>

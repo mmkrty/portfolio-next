@@ -22,7 +22,7 @@ function Projects({ projects }) {
 
           <div className="flex justify-center items-center">
             <Link
-              className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow"
+              className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
               href="https://github.com/mmkrty"
               target="_blank"
             >
