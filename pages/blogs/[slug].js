@@ -60,13 +60,13 @@ export const getStaticProps = async ({ params }) => {
 
 export function BlogPost({ post }) {
   return (
-    <article className="min-h-screen max-w-5xl mt-36 mx-auto flex justify-center items-start">
-      <div className="w-full">
-        <h1 className="text-3xl font-bold mb-6">{post.title}</h1>
+    <article className="min-h-screen max-w-3xl mt-36 mx-auto flex justify-center items-start">
+      <div className="w-full mx-4">
+        <h1 className="text-5xl font-bold mb-6">{post.title}</h1>
         <PortableText value={post.body} components={RichTextComponents} />
         <Link
           href="/blogs"
-          className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow mt-10"
+          className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow mt-10 hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
         >
           Back to Blog
         </Link>

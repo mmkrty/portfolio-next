@@ -4,51 +4,36 @@ import urlFor from "../../lib/urlFor";
 import Link from "next/link";
 
 function BlogsList({ posts }) {
-  console.log(posts.length);
+  console.log(posts);
   return (
     <div className="max-w-5xl mx-auto">
-      <div className=" gap-10 pb-24 grid grid-cols-1 md:grid-cols-2  mx-6 xs:mx-14">
+      <div className=" gap-10 pb-24 flex flex-col  mx-6 xs:mx-14">
         {posts.map((post, idx) => (
           <div key={idx} className="flex flex-col">
-            <div className="relative w-full h-80">
-              <Link href="/blogs/[slug]" as={`/blogs/${post.slug.current}`}>
-                <Image
-                  className="object-cover"
-                  src={urlFor(post.mainImage).url()}
-                  alt={post.author.name}
-                  fill
-                />
-              </Link>
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-20 backdrop-blur-lg drop-shadow-lg text-white p-4 flex justify-between ">
-                <div>
-                  <p>{post.title}</p>
-                  <p>
-                    {new Date(post._createdAt).toLocaleDateString("en-Us", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </p>
-                </div>
-
-                <div>
-                  {post.categories.map((category, idx) => {
-                    return (
-                      <div key={idx}>
-                        <p>{category.title}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+            <Link href="/blogs/[slug]" as={`/blogs/${post.slug.current}`}>
+              <h2 className="text-4xl font-semibold">{post.title}</h2>
+            </Link>
+            <p className="italic">
+              {new Date(post._updatedAt).toLocaleDateString("en-Us", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
+            <p>{post.description}</p>
+            <div className="flex gap-2">
+              {post.categories.map((category, idx) => {
+                return (
+                  <div key={idx}>
+                    <p>{category.title}</p>
+                  </div>
+                );
+              })}
             </div>
 
-            <div>
-              <p>{post.title}</p>
-              <p>{post.description}</p>
-            </div>
-
-            <p>Read post</p>
+            <Link href="/blogs/[slug]" as={`/blogs/${post.slug.current}`}>
+              Read post
+            </Link>
           </div>
         ))}
       </div>
