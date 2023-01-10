@@ -6,6 +6,7 @@ import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
 import Skills from "../components/skills/skills";
 import Projects from "../components/projects/projects";
+import Contact from "../components/contact/contact";
 
 const projectQuery = groq`
   *[_type=='project'] {
@@ -34,6 +35,7 @@ export default function Home({ projects }) {
         <About />
         <Skills />
         <Projects projects={projects} />
+        <Contact />
       </main>
     </>
   );

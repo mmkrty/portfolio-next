@@ -21,7 +21,7 @@ export const getStaticProps = async ({ preview = false }) => {
 function Blogs({ posts }) {
   console.log(posts[0].slug);
   return (
-    <div>
+    <div className="min-h-screen">
       <BlogHeader />
       <BlogsList posts={posts} />
     </div>

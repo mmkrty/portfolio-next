@@ -11,3 +11,8 @@ body {
   filter: invert(82%) sepia(10%) saturate(287%) hue-rotate(165deg)
     brightness(88%) contrast(90%);
 }
+
+.filter-grey:hover {
+  filter: invert(89%) sepia(19%) saturate(5305%) hue-rotate(331deg)
+    brightness(101%) contrast(91%);
+}

@@ -68,6 +68,9 @@ export default function Navbar() {
                   <Link href="/#projects">Projects</Link>
                 </li>
                 <li className="text-white hover:text-primary_yellow transition-all ease-in-out duration-300">
+                  <Link href="/#contact">Contact</Link>
+                </li>
+                <li className="text-white hover:text-primary_yellow transition-all ease-in-out duration-300">
                   <Link href="/blogs">Blog</Link>
                 </li>
               </ul>

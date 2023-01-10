@@ -18,7 +18,7 @@ function Hero() {
         <div>
           <Link
             className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
-            href="https://drive.google.com/file/d/1pokUZN4gtxieKQAVF3dgtiXfxB-Ax4Iq/view?usp=share_link"
+            href="https://drive.google.com/file/d/1snDcC_5286vqRdc_ZC-_ITF-A9bbh0lH/view?usp=share_link"
             target="_blank"
           >
             Download My CV

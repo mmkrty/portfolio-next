@@ -18,7 +18,7 @@ module.exports = {
         heebo: ['"Heebo"', "sans-serif"],
       },
       colors: {
-        primary_yellow: "#ED7E22", //DD5353,FF6464,B73E3E
+        primary_yellow: "#F4AB3B", //DD5353,FF6464,B73E3E
         primary_black: "#000000",
         primary_black_light: "#1f272e",
         primary_blue: "#5c7196",
