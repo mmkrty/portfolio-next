@@ -19,7 +19,7 @@ function Contact() {
         </p>
         <Link
           className="inline-block text-primary_yellow font-fira py-4 px-6 mt-6 border rounded-sm border-primary_yellow hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
-          href="mailto:email@email.de"
+          href="mailto:liuhaoch1990@gmail.com"
         >
           Contact Me
         </Link>
