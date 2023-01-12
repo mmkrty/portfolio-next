@@ -21,19 +21,26 @@ function BlogsList({ posts }) {
               })}
             </p>
             <p>{post.description}</p>
-            <div className="flex gap-2">
+            <Link
+              href="/blogs/[slug]"
+              as={`/blogs/${post.slug.current}`}
+              className="font-fira"
+            >
+              Read post
+            </Link>
+
+            <div className="flex gap-2 mt-2">
               {post.categories.map((category, idx) => {
                 return (
-                  <div key={idx}>
+                  <div
+                    key={idx}
+                    className="bg-primary_blue text-white px-2 py-1 rounded-md"
+                  >
                     <p>{category.title}</p>
                   </div>
                 );
               })}
             </div>
-
-            <Link href="/blogs/[slug]" as={`/blogs/${post.slug.current}`}>
-              Read post
-            </Link>
           </div>
         ))}
       </div>
