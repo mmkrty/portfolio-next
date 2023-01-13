@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+
 import Hero from "../components/hero/hero";
 import About from "../components/about/about";
 import { groq } from "next-sanity";
@@ -23,20 +23,12 @@ export const getStaticProps = async ({ preview = false }) => {
 
 export default function Home({ projects }) {
   return (
-    <>
-      <Head>
-        <title>Hao Chen</title>
-        <link rel="icon" href="/7.svg" />
-        <meta name="description" content="Hao Chen's Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects projects={projects} />
-        <Contact />
-      </main>
-    </>
+    <main>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects projects={projects} />
+      <Contact />
+    </main>
   );
 }
