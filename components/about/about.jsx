@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import SectionHeading from "../sectionHeading/sectionHeading";
 
 function About() {
@@ -18,10 +19,6 @@ function About() {
         <div className="mt-4">
           <SectionHeading title="About me" />
           <p className=" mb-2">
-            Hi there, this is Hao Chen. I'm a Web developer and Historian based
-            in Berlin.
-          </p>
-          <p className=" mb-2">
             My interest in web development began when I attended a digital
             humanities workshop during my studies. I realized that in order to
             reach more people, high-quality content needs to be supported by
@@ -29,12 +26,34 @@ function About() {
             universal medium, so I decided to give web development a try and
             ended up loving it.
           </p>
-          <p>
+          <p className="mb-2">
             After a year of self-learning and 9 weeks of intensive training at
             Le Wagon, I'm looking forward to working full-time as a web
             developer. Recently, I have been learning React, NextJS, and Rails
             by building projects with them.
           </p>
+          <Link
+            href="/blogs/this-is-my-first-blog-post"
+            className="font-fira text-lg mt-2 hover:text-primary_yellow"
+          >
+            <span className="pr-2 hover:pr-4 hover:text-primary_yellow transition-all ease-in-out duration-300 ">
+              Find out more about me
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6 inline-block"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
