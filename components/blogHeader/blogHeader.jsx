@@ -4,7 +4,7 @@ function BlogHeader() {
   return (
     <section className="min-h-1/2-screen max-w-5xl mt-28 mb-10 mx-auto flex justify-center items-center sm:mt-0 md:mb-0">
       <div className="mx-6 xs:mx-14">
-        <h1 className="text-6xl font-black text-primary_yellow mb-2">
+        <h1 className="text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-white">
           My Blog
         </h1>
         <p>
