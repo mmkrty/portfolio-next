@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../sectionHeading/sectionHeading";
-import Link from "next/link";
+import LinkButton from "../linkButton/linkButton";
 
 function Contact() {
   return (
@@ -17,12 +17,7 @@ function Contact() {
           interested in collaborating on a project, please don't hesitate to
           reach out to me. I look forward to hearing from you.
         </p>
-        <Link
-          className="inline-block text-primary_yellow font-fira py-4 px-6 mt-6 border rounded-sm border-primary_yellow hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
-          href="mailto:liuhaoch1990@gmail.com"
-        >
-          Contact Me
-        </Link>
+        <LinkButton href="mailto:liuhaoch1990@gmail.com" content="Let's Chat" />
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../sectionHeading/sectionHeading";
 import ProjectCard from "../projectCard/projectCard";
-import Link from "next/link";
+import LinkButton from "../linkButton/linkButton";
 
 function Projects({ projects }) {
   // console.log(projects);
@@ -21,13 +21,10 @@ function Projects({ projects }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <Link
-              className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
+            <LinkButton
               href="https://github.com/mmkrty"
-              target="_blank"
-            >
-              Check out my Github for more
-            </Link>
+              content="Check out my Github for more"
+            />
           </div>
         </div>
       </div>

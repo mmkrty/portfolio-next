@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LinkButton from "../linkButton/linkButton";
 import React from "react";
 
 function Hero() {
@@ -16,13 +16,10 @@ function Hero() {
           Web Developer & Historian based in Berlin
         </h2>
         <div>
-          <Link
-            className="inline-block text-primary_yellow font-fira py-4 px-6 border rounded-sm border-primary_yellow hover:bg-primary_yellow hover:bg-opacity-20 transition-all ease-in-out duration-300"
+          <LinkButton
             href="https://drive.google.com/file/d/1SYO1eUENk_ViJMsa-CN4GzDU91MY_H04/view?usp=share_link"
-            target="_blank"
-          >
-            Download My CV
-          </Link>
+            content="Download My CV"
+          />
         </div>
       </div>
     </section>
