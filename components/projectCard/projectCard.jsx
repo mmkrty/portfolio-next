@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function ProjectCard({ project, index }) {
   return (
-    <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
+    <article className="gap-4 grid grid-cols-1 md:grid-cols-2">
       <div className="relative rounded-sm overflow-hidden md:self-stretch">
         <img
           className="object-contain h-full w-full md:object-cover border-2 border-primary_yellow"
@@ -56,7 +56,7 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

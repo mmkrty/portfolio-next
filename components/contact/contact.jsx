@@ -11,7 +11,7 @@ function Contact() {
       <div className="flex flex-col justify-center items-center mx-6 xs:mx-14">
         <SectionHeading title="Contact" />
 
-        <p className="max-w-xl text-justify">
+        <p className="max-w-xl text-justify mb-10">
           I am currently actively searching for new opportunities. If you have a
           project or opportunity that aligns with my skillset, or if you are
           interested in collaborating on a project, please don't hesitate to
