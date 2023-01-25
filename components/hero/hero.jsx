@@ -17,7 +17,7 @@ function Hero() {
         </h2>
         <div>
           <LinkButton
-            href="https://drive.google.com/file/d/1SYO1eUENk_ViJMsa-CN4GzDU91MY_H04/view?usp=share_link"
+            href="https://drive.google.com/file/d/1iMJzZM6w9iVe0ukuEdX4SGJB2upADkWm/view?usp=share_link"
             content="Download My CV"
           />
         </div>
