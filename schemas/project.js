@@ -44,5 +44,15 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: "featured",
+      title: "Featured",
+      type: "boolean",
+    }),
+    defineField({
+      name: "order",
+      title: "Order",
+      type: "number",
+    }),
   ],
 });
