@@ -9,10 +9,10 @@ import Projects from "../components/projects/projects";
 import Contact from "../components/contact/contact";
 
 const projectQuery = groq`
-  *[_type=='project'] {
+  *[_type=='project' && featured == true] {
     ...,  
     technologies[]->
-  } | order(_createdAt asc)
+  } | order(order asc)
 `;
 
 export const getStaticProps = async ({ preview = false }) => {
