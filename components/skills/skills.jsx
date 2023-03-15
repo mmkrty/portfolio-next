@@ -7,12 +7,9 @@ function Skills() {
       id="skills"
       className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-24 md:min-h-screen"
     >
-      <div className="flex flex-col justify-center mx-6 xs:mx-14">
+      <div className="flex flex-col justify-center mx-6 xs:mx-14 w-full">
         <SectionHeading title="Skills" />
-        <p>
-          I have explored various technologies in the field of web development,
-          but I have chosen to delve deeper into a select few, including:
-        </p>
+        <p>Here are some tech skills I've delved into:</p>
         <div className="font-fira mt-3 gap-4 grid grid-cols-1 md:grid-cols-2">
           <div className="bg-primary_black_light py-3 px-4 rounded-sm">
             <h3 className="text-xl font-semibold">Frontend</h3>
