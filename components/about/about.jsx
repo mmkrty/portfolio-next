@@ -1,22 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import SectionHeading from "../sectionHeading/sectionHeading";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  fadeInRightVariant,
+  fadeInLeftVariant,
+} from "../../framer_varients/varients";
+
 function About() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <section
       id="about"
       className="min-h-screen max-w-5xl my-0 mx-auto flex justify-center items-center"
     >
       <div className="flex flex-col justify-center items-center gap-4 mx-6 xs:mx-14 md:flex-row-reverse md:gap-8 md:items-start">
-        <div className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-primary_yellow md:w-auto md:h-full md:rounded-md">
+        <motion.div
+          ref={ref}
+          variants={fadeInRightVariant}
+          initial="hidden"
+          animate={control}
+          className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-primary_yellow md:w-auto md:h-full md:rounded-md"
+        >
           <img
             className="object-cover scale-150 object-left origin-[10%_45%]"
             src="/thumb.png"
             alt="haochen"
           />
-        </div>
-        <div className="mt-4">
+        </motion.div>
+        <motion.div
+          ref={ref}
+          variants={fadeInLeftVariant}
+          initial="hidden"
+          animate={control}
+          className="mt-4"
+        >
           <SectionHeading title="About me" />
           <p className=" mb-2">
             My interest in web development began when I attended a digital
@@ -54,7 +84,7 @@ function About() {
               />
             </svg>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

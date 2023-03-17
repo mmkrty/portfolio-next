@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../components/RichTextComponents";
 import urlFor from "../../lib/urlFor";
 import Image from "next/image";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { fadeInBottomVariant } from "../../framer_varients/varients";
+
 function ProjectCard({ project, index }) {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-    <article className="gap-4 grid grid-cols-1 md:grid-cols-2">
+    <motion.article
+      ref={ref}
+      variants={fadeInBottomVariant}
+      initial="hidden"
+      animate={control}
+      className="gap-4 grid grid-cols-1 md:grid-cols-2"
+    >
       <div className="relative rounded-sm overflow-hidden md:self-stretch">
         <img
           className="object-contain h-full w-full md:object-cover border-2 border-primary_yellow"
@@ -56,7 +77,7 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }
 

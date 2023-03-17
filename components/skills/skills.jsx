@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "../sectionHeading/sectionHeading";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { fadeInBottomVariant } from "../../framer_varients/varients";
+
 function Skills() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-    <section
+    <motion.section
+      ref={ref}
+      variants={fadeInBottomVariant}
+      initial="hidden"
+      animate={control}
       id="skills"
       className="max-w-5xl my-0 mx-auto flex justify-center items-center mb-24 md:min-h-screen"
     >
@@ -148,7 +167,7 @@ function Skills() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
