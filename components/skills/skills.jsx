@@ -7,7 +7,10 @@ import { fadeInBottomVariant } from "../../framer_varients/varients";
 
 function Skills() {
   const control = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    threshold: 0.5, // Intersection threshold
+    rootMargin: "-30px", // Offset to trigger the animation
+  });
 
   useEffect(() => {
     if (inView) {
