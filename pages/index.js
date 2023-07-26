@@ -38,11 +38,20 @@ export default function Home({ projects, ownerInfo }) {
 
   return (
     <main>
-      <Hero />
-      <About />
+      <Hero 
+        firstname={firstname}
+        lastname={lastname}
+        headerline={headerline}
+      />
+      <About
+        abouttext={abouttext}
+       />
       <Skills />
       <Projects projects={projects} />
-      <Contact />
+      <Contact
+        contacttext={contacttext}
+        email={email}
+       />
     </main>
   );
 }

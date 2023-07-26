@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { fadeInBottomVariant } from "../../framer_varients/varients";
 
-function Hero() {
+function Hero({ firstname, lastname, headerline }) {
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -29,10 +29,10 @@ function Hero() {
       <div className="mx-6 xs:mx-14">
         <p className="font-fira mb-5">Hi, this is</p>
         <h1 className="text-6xl font-black mb-2  text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-white">
-          Hao Chen, Liu
+          {firstname}, {lastname}
         </h1>
         <h2 className="text-5xl font-medium mb-6">
-          Web Developer & Historian based in Berlin
+          {headerline}
         </h2>
         <div>
           <LinkButton
