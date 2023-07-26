@@ -6,7 +6,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="max-w-5xl my-40 mx-auto flex justify-center items-center"
+      className="max-w-5xl my-40 mx-auto flex justify-center items-center md:min-h-screen"
     >
       <div className="flex flex-col justify-center items-center mx-6 xs:mx-14">
         <SectionHeading title="Contact" />
