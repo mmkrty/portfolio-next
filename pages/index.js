@@ -15,13 +15,27 @@ const projectQuery = groq`
   } | order(order asc)
 `;
 
+const ownerQuery = groq`
+  *[_type == 'ownerInfo'] {
+    firstname,
+    lastname,
+    headerline,
+    abouttext,
+    contacttext,
+    email
+  }[0]
+`;
+
 export const getStaticProps = async ({ preview = false }) => {
   const projects = await client.fetch(projectQuery);
+  const ownerInfo = await client.fetch(ownerQuery);
 
-  return { props: { projects } };
+  return { props: { projects, ownerInfo } };
 };
 
-export default function Home({ projects }) {
+export default function Home({ projects, ownerInfo }) {
+  const { firstname, lastname, headerline, abouttext, contacttext, email } = ownerInfo;
+
   return (
     <main>
       <Hero />
